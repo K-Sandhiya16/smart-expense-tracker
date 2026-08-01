@@ -1,0 +1,28 @@
+### Add Expense
+POST http://localhost:8080/api/expenses
+Content-Type: application/json
+
+{
+  "title": "Lunch",
+  "amount": 250,
+  "category": "Food",
+  "date": "2026-08-01"
+}
+
+### Get All Expenses
+GET http://localhost:8080/api/expenses
+
+### Filter by Category
+GET http://localhost:8080/api/expenses?category=Food
+
+### Calculate Total
+GET http://localhost:8080/api/expenses/total
+
+### Calculate Food Total
+GET http://localhost:8080/api/expenses/total?category=Food
+
+### Delete Expense
+DELETE http://localhost:8080/api/expenses/e732aea6-7eee-463b-889d-1b73cf4601b7
+
+### Verify Delete
+GET http://localhost:8080/api/expenses
